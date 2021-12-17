@@ -1,0 +1,142 @@
+:root {
+  --color-first: #65587f;
+  --color-second: #f18867;
+  --color-third: #e85f99;
+  --color-forth: #50bda1;
+  --block-width: 300px;
+  --block-height: 270px;
+  --border-width: 0.625rem;
+  --border-radius-outer: 8px;
+  --border-radius-inner: calc(var(--border-radius-outer) / 2);
+  --font-plain: "IBM Plex Sans", sans-serif;
+  --font-special: "Fredoka One", sans-serif;
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+}
+.overwiev {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-content: flex-start;
+  min-width: 100%;
+  margin-top: 1rem;
+}
+.player {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-content: flex-start;
+  width: 100%;
+  padding: 2rem;
+}
+.player__left {
+  position: absolute;
+  left: 2%;
+  font-size: 35px;
+}
+.player__right {
+  position: absolute;
+  right: 2%;
+  font-size: 35px;
+}
+.overwiev__table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tictac__table {
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  vertical-align: center;
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 2px;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 17px 50px;
+}
+.box {
+  background-color: white;
+  transition: background-color 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 55px;
+}
+
+.box:hover {
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.5s;
+  cursor: pointer;
+}
+.Center__Text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
+.winner__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  min-height: 100vh;
+}
+.winnerget {
+  font-size: 55px;
+}
+.fill:hover,
+.fill:focus {
+  box-shadow: inset 0 0 0 2em var(--hover);
+}
+.fill {
+  cursor: pointer;
+  --color: #033d31;
+  --hover: #000000;
+  font-size: 12px;
+}
+.gameboard {
+  background: none;
+  border: none;
+  overflow: none;
+  outline: none;
+  color: rgb(0, 255, 149);
+}
+@media screen and (max-width: 1050px) {
+  .Center__Text {
+    margin: 40px auto;
+  }
+  .player__left {
+    font-size: 30px;
+  }
+  .player__right {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .tictac__table {
+    width: 250px;
+    height: 250px;
+  }
+  .box {
+    font-size: 35px;
+  }
+  .player__left {
+    font-size: 20px;
+  }
+  .player__right {
+    font-size: 20px;
+  }
+  .Center__Text {
+    font-size: 20px;
+  }
+}

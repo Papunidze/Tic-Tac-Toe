@@ -1,0 +1,44 @@
+.input__name {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  margin: 30px auto;
+}
+.input__name input {
+  display: block;
+  margin: 2rem auto;
+  border: none;
+  padding: 0;
+  width: 10.5ch;
+  background: repeating-linear-gradient(
+      90deg,
+      dimgrey 0,
+      dimgrey 1ch,
+      transparent 0,
+      transparent 1.5ch
+    )
+    0 100%/10ch 2px no-repeat;
+  font: 2ch droid sans mono, consolas, monospace;
+  letter-spacing: 0.5ch;
+}
+.input__name input:focus {
+  outline: none;
+  color: rgb(255, 0, 0);
+}
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+.raise {
+  --color: #246b47;
+  --hover: #ff6060;
+}
+.str__Btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
